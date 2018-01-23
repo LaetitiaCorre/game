@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  margin: 0px;
+}
+
+.container {
+  width: 1100px; 
+  height: 550px;
+  background-color: rgb(39, 5, 39);
+  margin: 50px auto;
+}
+
+.backgroundItems {
+  width: 150px;
+  height: 250px;
+}
+
+.itemsBlocks {
+  width: 120px;
+  height: 230px;
+}
+

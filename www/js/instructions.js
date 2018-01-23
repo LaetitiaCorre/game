@@ -1,0 +1,1 @@
+buttonP.addEventListener('click', onclick);
