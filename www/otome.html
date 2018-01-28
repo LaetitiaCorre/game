@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/otome.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Otome</title>
 </head>
 <body>
-  
+    <audio autoplay loop >
+        <source src="/audio/oragePluie.mp3" type="audio/mp3" />
+    </audio>
     <div class="container">
-        <h2 id="message"></h2>
-    <div class="moodbar">
-        <div class="moodbarProgress"></div>
-    </div>
-    <section id="button">
-
-    </section>
+        <div class="character"></div>
+        <div><img class="rain" src="/image/rain.gif" alt="rain"></div>
+        <div class="ui">
+            <h2 id="message"></h2>
+            <div class="barre">
+                <img class="coeur" src="/image/coeur.png" alt="heart">     
+                <img class="fondbarre" src="/image/fondbarre.png" alt="fondbarre">
+                <div class="hideb">
+                    <img class="fillbarre" src="/image/fillbarre.png" alt="fillbarre">
+                </div>
+            </div>
+            <img class="bulle" src="/image/bulleprota.png" alt="">
+            <section id="button">
+            </section>
+        </div>
+        
+    
 
     </div>
     <script type="text/javascript" src="js/classAnswer.js"></script>

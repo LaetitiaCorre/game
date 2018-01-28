@@ -23,7 +23,7 @@ let currentQuestion = firstQuestion;
 let moodbar = 0;
 
 let section = document.querySelector('#button');
-let moodbarProgress = document.querySelector('.moodbarProgress');
+let moodbarProgress = document.querySelector('.hideb');
 
 let prota = new Character('taurus', 'O+', 'green');
 let wWalker = new Character('taurus', 'A+', 'green');
@@ -57,7 +57,7 @@ function display (){
   let Bbutton = document.createElement('button');
   let Cbutton = document.createElement('button');
 
-  moodbarProgress.style.width = moodbar + '%';
+  moodbarProgress.style.height = moodbar + '%';
 
   message.textContent = currentQuestion.message;
   Abutton.textContent = currentQuestion.answers[0].message;

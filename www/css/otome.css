@@ -4,36 +4,122 @@ body {
 }
 
 .container {
+  position: relative;
   width: 1100px;
   height: 550px;
-  background-color: rgb(22, 34, 48);
+  background-image: url('/image/soujibackground.jpg');
+  background-size: 100%;
   margin: 50px auto;
   border-radius: 25px;
   box-shadow: 0px 0px 10px 3px rgba(15, 12, 20, 0.651);
 }
 
+.rain {
+  width: 1100px;
+  height: 550px;
+  border-radius: 25px;
+  position: absolute;
+  opacity: 0.2;
+  
+}
+
+.barre {
+  position: absolute;
+  width: 55px;
+  height: 383px;
+  right: 20px;
+  bottom: 90px;
+}
+
+.coeur {
+  position: absolute;
+  z-index: 3;
+  width: 90px;
+  height: auto;
+  bottom: -50px;
+  left: -18px;
+}
+
+.fondbarre {
+  position: absolute;
+  z-index: 1;
+  width: 55px;
+  height: auto;
+}
+
+.hideb {
+  position: absolute;
+  z-index: 1;
+  width: 55px;
+  bottom: 0;
+  overflow: hidden;
+  transition: height 300ms ease-out;
+}
+
+.fillbarre {
+  width: 55px;
+  height: auto;
+}
+
+.character {
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+  height: 500px;
+  background-image: url('/image/soujitransfpers.png');
+  background-size: 100%;
+  z-index: 0;
+  left: 30%;
+  
+}
+
+.ui {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bulle {
+  position: absolute;
+  width: 170px;
+  height: auto;
+  bottom: 10px;
+  left: 20px;
+}
+
 #message {
   color: rgb(255, 255, 255);
-  padding: 150px 300px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  background-color: rgba(9, 9, 31, 0.418);
+  border-radius: 5px;
+  border: rgba(143, 189, 190, 0.561) solid 1px;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 170px;
+  margin-left: 150px;
+  
+  
 }
 
 #button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+button {
+  cursor: pointer;
   padding: 0px 270px;
-  border-radius: 10px; 
-  color: blue;
+  border-radius: 10px;
   border: none;
-}
-
-.moodbar {
-  width: 500px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-}
-
-.moodbarProgress {
-  width: 0%;
-  height: 100%;
-  background-color: brown;  
-  transition: width 300ms ease-in;
+  background: transparent;
+  color: white;
+  padding-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  text-align: left;
 }
