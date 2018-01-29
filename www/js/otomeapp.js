@@ -9,18 +9,18 @@ let quiEsTu = new Question("Moi ? Ca n'a pas d'importance...", [
   new Answer("Si tu le dis...")
 ]);
 let ouSommesNous = new Question ("Nous sommes au QG de l'Alliance.", [
-  new Answer("L’alliance ?"),
-  new Answer("Je suis vraiment mal tombé..."),
-  new Answer("Dieu merci !")
+  new Answer("L’alliance ?", -15),
+  new Answer("Je suis vraiment mal tombé...", -5),
+  new Answer("Dieu merci !", 10)
 ]);
 let firstQuestion = new Question ("Tu es réveillé! Désolé pour ce traitement, je vais te détacher...", [
   new Answer("Où somme nous ?", ouSommesNous, -10),
   new Answer("Qui es-tu ??", quiEsTu, -20),
-  new Answer("Merci...", merci, 20)
+  new Answer("Merci...", merci, 40)
 ]);
 
 let currentQuestion = firstQuestion;
-let moodbar = 0;
+let moodbar = 25;
 
 let section = document.querySelector('#button');
 let moodbarProgress = document.querySelector('.hideb');
@@ -47,6 +47,14 @@ if (prota.colors === wWalker.colors) {
 display();
 
 function display (){
+  if (moodbar <= 30) {
+    document.querySelector('.characterA').style.display = "block";
+  }
+
+  if (moodbar >= 50) {
+    document.querySelector('.characterH').style.display = "block";
+  }
+
   if (!currentQuestion) {
     console.log('pas de question à afficher');
     return;
