@@ -4,6 +4,7 @@ body {
 }
 
 .container {
+  display: block;
   position: relative;
   width: 1100px;
   height: 550px;
@@ -14,6 +15,7 @@ body {
   margin: 50px auto;
   border-radius: 25px;
   box-shadow: 0px 0px 10px 3px rgba(15, 12, 20, 0.651);
+  overflow: hidden;
 }
 
 .rain {
@@ -21,8 +23,55 @@ body {
   height: 550px;
   border-radius: 25px;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.3;
+}
+
+@keyframes orage {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.2;
+  }
+
+  12% {
+    opacity: 0.5;
+  }
+
+  16% {
+    opacity: 0.2;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  30% {
+    opacity: 0;
+  }
   
+  100% {
+    opacity: 0;
+  }
+}
+
+.orage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(35deg, rgba(255,255,255,0) 0%,rgb(217, 252, 249) 100%);
+  opacity: 0;
+  animation-name: orage;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
 }
 
 .barre {
@@ -66,10 +115,11 @@ body {
 .character {
   position: absolute;
   bottom: 0;
-  width: 439px;
+  width: 532px;
   height: 530px;
   background-image: url('/image/soujitransfpers.png');
   background-size: 100%;
+  background-repeat: no-repeat;
   z-index: 0;
   left: 40%;
   
@@ -79,11 +129,13 @@ body {
   display: none;
   bottom: 0;
   position: absolute;
-  z-index: 2;
-  width: 439px;
+  z-index: 1;
+  width: 532px;
   height: 530px;
   background-size: 100%;
-  background-image: url('/image/SoujiAngry.png');
+  background-image: url('/image/soujiAngry.png');
+  background-repeat: no-repeat;
+  
   left: 40%;
 }
 
@@ -91,12 +143,65 @@ body {
   display: none;  
   bottom: 0;
   position: absolute;
-  width: 439px;
+  width: 532px;
   height: 530px;
   left: 40%;  
   background-size: 100%;
-  z-index: 2;
-  background-image: url('/image/SoujiHappy.png');
+  z-index: 1;
+  background-image: url('/image/soujiHappy.png');
+  background-repeat: no-repeat;
+  
+}
+
+@keyframes vampire {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 0.9;
+  }
+
+  3% {
+    opacity: 0.2;
+  }
+
+  6% {
+    opacity: 0.5;
+  }
+
+  8% {
+    opacity: 0.2;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  15% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+.characterV {  
+  bottom: 0;
+  position: absolute;
+  width: 532px;
+  height: 530px;
+  left: 40%;  
+  background-size: 100%;
+  z-index: 1;
+  background-image: url('/image/soujiVampire.png');
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation-name: vampire;
+  animation-duration: 8s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
 }
 
 .ui {
@@ -116,6 +221,7 @@ body {
 }
 
 #message {
+  flex: 1;
   color: rgb(255, 255, 255);
   font-family: 'Nunito', sans-serif;
   font-size: 20px;
@@ -135,18 +241,26 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  align-items: flex-start;
+  background-color: rgba(9, 9, 31, 0.418);
+  margin-top: 88px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  border: rgba(143, 189, 190, 0.561) solid 1px;
+  margin-left: 130px;
+  margin-right: 120px;
 }
 
 button {
   cursor: pointer;
-  padding: 0px 270px;
+  padding: 0px 200px;
   border-radius: 10px;
   border: none;
   background: transparent;
   color: white;
-  margin-bottom: 30px;
+  margin: 12px 0;
   font-family: 'Nunito', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
+
 }
