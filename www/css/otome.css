@@ -8,7 +8,7 @@ body {
   position: relative;
   width: 1100px;
   height: 550px;
-  background-image: url('/image/Soujibackground2.jpg');
+  background-image: url('../image/Soujibackground2.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   bottom: 0;
@@ -117,7 +117,7 @@ body {
   bottom: 0;
   width: 532px;
   height: 530px;
-  background-image: url('/image/soujitransfpers.png');
+  background-image: url('../image/soujitransfpers.png');
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 0;
@@ -133,7 +133,7 @@ body {
   width: 532px;
   height: 530px;
   background-size: 100%;
-  background-image: url('/image/soujiAngry.png');
+  background-image: url('../image/soujiAngry.png');
   background-repeat: no-repeat;
   
   left: 40%;
@@ -148,7 +148,7 @@ body {
   left: 40%;  
   background-size: 100%;
   z-index: 1;
-  background-image: url('/image/soujiHappy.png');
+  background-image: url('../image/soujiHappy.png');
   background-repeat: no-repeat;
   
 }
@@ -195,7 +195,7 @@ body {
   left: 40%;  
   background-size: 100%;
   z-index: 1;
-  background-image: url('/image/soujiVampire.png');
+  background-image: url('../image/soujiVampire.png');
   background-repeat: no-repeat;
   opacity: 0;
   animation-name: vampire;
